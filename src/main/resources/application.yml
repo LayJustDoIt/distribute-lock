@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: distribute_lock
+  datasource:
+    url: jdbc:mysql://localhost:3306/distribute?serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: 192.168.1.12
+    port: 6379
+    password: redis-dev
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: org.lay.pojo
+  configuration:
+    map-underscore-to-camel-case: true
